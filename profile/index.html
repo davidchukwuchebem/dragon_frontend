@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="../asset/icon/icon-fontawesome/css/all.min.css">
+    <title>Dragon | profile</title>
+</head>
+<body>
+    <header style="padding: 15px 0;">
+        <div class="flex"><a href="../home/index.html" style="color: black;"><i class="fa fa-arrow-left" style="margin: 0 5px;"></i></a><h3 style="margin: 0 5px;">Frank Ikemefuna</h3></div>
+    </header>
+  <div class="profile">
+        <div class="cover"></div>
+        <img src="../asset/image/01.jpg" alt="" width="100px"         height="100px" style="border-radius: 50%; margin-top: -40px; margin-left: 10px;border: 4px solid white;">
+       <div class="about">
+        <h2>Frank Ikemefuna</h2>
+        <div class="flex">
+        <p><strong>Connections:</strong> 500</p>
+        <p><strong>Mutual:</strong> 10</p>
+        </div>
+         <div class="connect">
+        <button class="active">Connect</button>
+        <button>Message</button>
+        <button class="menu">...</button>
+        </div>
+       </div>
+  </div>
+  <div class="main">
+      <div class="title">
+          <button class="post-btn tab" index="tab1">Post</button>
+          <button class="tab" index="tab2">Profession</button>
+          <button class="tab" index="tab3">Hubbies</button>
+      </div>
+      <div class=" action" id="tab1">
+                <div class="post">
+        <div class="author">
+            <div class="pro">
+                <img src="../asset/image/01.jpg" alt="" width="30px" height="30px" style="border-radius: 50%; margin-right: 5px;">
+            <div>
+            <strong>Franke Ikemefuna</strong>
+            <br>            
+            <small>2hrs ago</small>
+            </div>
+            </div>
+            <strong>...</strong>
+        </div>
+        <div class="content">
+            <h3 class="titl">Header Title</h3>
+            <p id="post-content">
+                Drug abuse, a term that refers to the misuse or excessive use of legal and illegal substances, has become a widespread problem with serious consequences for individuals and societies alike. This phenomenon affects millions of people across the world, leading to health complications, social disruption, and economic losses. In this essay, we will explore the definition of drug abuse, its causes, its effects on individuals and society, and possible solutions
+                
+            </p>
+            <img src="../asset/image/01.jpg" alt="" width="100%" >
+        </div>
+        <div class="reaction">
+            <small><i class="fa fa-heart"></i>1.2k</small>
+            <small><i class="fa fa-message"></i>100</small>
+        </div>
+    </div>
+      </div>
+      <div class="view" id="tab2"></div>
+      <div class="view" id="tab3"></div>
+  </div>
+  
+  
+  <script>
+      let tabs = document.querySelectorAll(".tab")
+let views = document.querySelectorAll(".view")
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    console.log("ok!")
+    // Remove "action" class from all views
+    views.forEach((view) => view.classList.remove("action"))
+
+    // Add "action" class to the active view
+    let tabIndex = tab.getAttribute("index")
+    let tabPane = document.querySelector(tabIndex)
+    tabPane.classList.add("action")
+  })
+})
+     
+  </script>
+</body>
+</html>
